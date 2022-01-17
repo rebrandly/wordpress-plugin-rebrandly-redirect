@@ -8,20 +8,20 @@
  * registers the activation and deactivation functions, and defines a function
  * that starts the plugin.
  *
- * @link              http://example.com
+ * @link              https://rebrandly.com
  * @since             1.0.0
- * @package          Rebrandly_Domain_Redirect
+ * @package           Rebrandly_Domain_Redirect
  *
  * @wordpress-plugin
- * Plugin Name:       WordPress Plugin Boilerplate
- * Plugin URI:        http://example.com/rebrandly-domain-redirect-uri/
- * Description:       This is a short description of what the plugin does. It's displayed in the WordPress admin area.
+ * Plugin Name:       Rebrandly Domain Redirect
+ * Plugin URI:        https://github.com/rebrandly/wordpress-plugin-rebrandly-redirect
+ * Description:       Connect your WordPress application with Rebrandly and create branded links re-using the same domain name
  * Version:           1.0.0
- * Author:            Your Name or Your Company
- * Author URI:        http://example.com/
- * License:           GPL-2.0+
- * License URI:       http://www.gnu.org/licenses/gpl-2.0.txt
- * Text Domain:      rebrandly-domain-redirect
+ * Author:            Rebrandly
+ * Author URI:        https://rebrandly.com/
+ * License:           GPL-3.0+
+ * License URI:       http://www.gnu.org/licenses/gpl-3.0.txt
+ * Text Domain:       rebrandly-domain-redirect
  * Domain Path:       /languages
  */
 

@@ -19,7 +19,7 @@
  *
  * @package    Rebrandly_Domain_Redirect
  * @subpackage Rebrandly_Domain_Redirect/includes
- * @author     Your Name <email@example.com>
+ * @author     Rebrandly Devs <dev@rebrandly.com>
  */
 class Rebrandly_Domain_Redirect_Loader {
 

@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Fired during plugin activation
+ * Fired during plugin deactivation
  *
  * @link       http://example.com
  * @since      1.0.0
@@ -11,16 +11,16 @@
  */
 
 /**
- * Fired during plugin activation.
+ * Fired during plugin deactivation.
  *
- * This class defines all code necessary to run during the plugin's activation.
+ * This class defines all code necessary to run during the plugin's deactivation.
  *
  * @since      1.0.0
  * @package    Rebrandly_Domain_Redirect
  * @subpackage Rebrandly_Domain_Redirect/includes
- * @author     Your Name <email@example.com>
+ * @author     Rebrandly Devs <dev@rebrandly.com>
  */
-class Rebrandly_Domain_Redirect_Activator {
+class Rebrandly_Domain_Redirect_Deactivator {
 
 	/**
 	 * Short Description. (use period)
@@ -29,7 +29,7 @@ class Rebrandly_Domain_Redirect_Activator {
 	 *
 	 * @since    1.0.0
 	 */
-	public static function activate() {
+	public static function deactivate() {
 
 	}
 
