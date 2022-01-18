@@ -100,4 +100,31 @@ class Rebrandly_Domain_Redirect_Public {
 
 	}
 
+	public function rebrandly_aliasing_fallback() {
+		if(is_404()){
+			global $wp_query;
+			$options = get_option( 'rebrandly_aliasing_options', NULL);
+			$alias = $options["alias"];
+
+			// not configured yet, skip
+			if (empty($alias)) {
+				return;
+			}
+			
+
+			// loop prevention (original query param is rb.routing.mode but . gets translated into _)
+			if ($_GET['rb_routing_mode'] == 'aliasing')
+			{
+				return;
+			}
+			add_query_arg('rb.routing.mode', 'aliasing');
+
+			$fallback_url = "https://" . $alias . $_SERVER[REQUEST_URI];
+			$http_temporary_redirect = 302;
+			$x_redirect_by = 'rebrandly';
+			wp_redirect( $fallback_url, $http_temporary_redirect, $x_redirect_by);
+			exit;
+		}
+	}
+
 }
