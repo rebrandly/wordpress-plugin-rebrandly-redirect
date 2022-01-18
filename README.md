@@ -12,6 +12,7 @@ Here are a few steps necessary to use this:
 3. Set the alias name in the Admin menu (Settings > Rebrandly) and Save your settings
 
 <p align="center">
+  <img src="screenshots/redirection-demo.gif" width="75%" alt="settings page">
   <img src="screenshots/rebrandly-links.png" width="75%" alt="settings page">
   <img src="screenshots/domain-details.png" width="75%" alt="settings page">
   <img src="screenshots/settings-menu.png" width="75%" title="settings menu">
