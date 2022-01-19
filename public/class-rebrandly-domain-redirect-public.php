@@ -102,7 +102,6 @@ class Rebrandly_Domain_Redirect_Public {
 
 	public function rebrandly_aliasing_fallback() {
 		if(is_404()){
-			global $wp_query;
 			$options = get_option( 'rebrandly_aliasing_options', NULL);
 			$alias = $options["alias"];
 
