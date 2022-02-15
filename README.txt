@@ -35,6 +35,14 @@ Yes, you will need to register a Rebrandly account and connect a domain via plug
 
 No, the plugin will only manage your 404 traffic and with not interfere at all with the content on your website.
 
+== Screenshots ==
+
+1. Navigating the website: routes not found are redirected away by Rebrandly
+2. Routes defined in the Rebrandly account
+3. Where to locate the Alias domain value
+4. Where to find the Rebrandly settings
+5. Configuring the alias domain value in WordPress admin panel
+
 == Changelog ==
 
 = 1.0 =
