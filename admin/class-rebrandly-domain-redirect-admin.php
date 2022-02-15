@@ -100,16 +100,16 @@ class Rebrandly_Domain_Redirect_Admin {
 
 	}
 
-	function rebrandly_aliasing_add_settings_page() {
+	function add_settings_page() {
 		$page_title = 'Rebrandly Aliasing Settings';
 		$menu_title = 'Rebrandly';
 		$permissions_required = 'manage_options';
 		$menu_slug = 'rebrandly-domain-redirect';
-		$callback_fn = array($this, 'rebrandly_aliasing_render_settings_page');
+		$callback_fn = array($this, 'render_settings_page');
 		add_options_page( $page_title, $menu_title, $permissions_required, $menu_slug,  $callback_fn);
 	}
 
-	function rebrandly_aliasing_render_settings_page() {
+	function render_settings_page() {
 		?>
 		<h2>Rebrandly settings</h2>
 		<form action="options.php" method="post">
@@ -123,26 +123,26 @@ class Rebrandly_Domain_Redirect_Admin {
 		<?php
 	}
 
-	function rebrandly_aliasing_register_settings() {
+	function register_settings() {
 		$page_slug = 'rebrandly-domain-redirect';
 
 		$option_group = 'rebrandly_aliasing_options';
 		$option_name = 'rebrandly_aliasing_options';
-		$validation_fn_callback = array($this, 'rebrandly_aliasing_options_validate');
-		register_setting( $option_group,  $option_name, $validation_fn_callback);
+		$validation_fn_callback = array($this, 'validate_settings');
+		register_setting( $option_group, $option_name, $validation_fn_callback);
 
 		$section_slug = 'api_settings';
 		$section_title = 'Configure your alias';
 
-		$intro_render_fn_callback = array($this, 'rebrandly_aliasing_section_intro');
-		add_settings_section( $section_slug, $section_title, $intro_render_fn_callback, $page_slug );
+		$intro_render_fn_callback = array($this, 'render_intro_section');
+		add_settings_section($section_slug, $section_title, $intro_render_fn_callback, $page_slug);
 		
-		$alias_field_render_fn_callback = array($this, 'rebrandly_aliasing_plugin_setting_alias');
-		add_settings_field('rebrandly_aliasing_plugin_setting_alias', 'Your alias', 
+		$alias_field_render_fn_callback = array($this, 'render_alias_setting');
+		add_settings_field('render_alias_setting', 'Your alias', 
 			$alias_field_render_fn_callback, $page_slug, $section_slug);
 	}
 
-	function rebrandly_aliasing_section_intro() {
+	function render_intro_section() {
 		echo '
 			<p>
 				Login to your Rebrandly account and connect a domain via aliasing.
@@ -152,13 +152,13 @@ class Rebrandly_Domain_Redirect_Admin {
 		';
 	}
 
-	function rebrandly_aliasing_plugin_setting_alias() {
-		include('partials/rebrandly-domain-redirect-alias-field.php');
+	function render_alias_setting() {
+		include('partials/alias-field.php');
 	}
 
-	function rebrandly_aliasing_options_validate( $input ) {
-		$newinput['alias'] = trim( $input['alias'] );
-		return $newinput;
+	function validate_settings( $settings ) {
+		$newsettings['alias'] = trim($settings['alias']);
+		return $newsettings;
 	}
 
 }

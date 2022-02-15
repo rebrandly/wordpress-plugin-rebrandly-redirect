@@ -109,7 +109,6 @@ class Rebrandly_Domain_Redirect_Public {
 			if (empty($alias)) {
 				return;
 			}
-			
 
 			// loop prevention (original query param is rb.routing.mode but . gets translated into _)
 			if ($_GET['rb_routing_mode'] == 'aliasing')
