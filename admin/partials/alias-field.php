@@ -1,4 +1,6 @@
 <?php
+    if (!defined('ABSPATH')) exit; // Exit if accessed directly
+
     $options = get_option( 'rebrandly_aliasing_options' );
     echo "
         <input 
