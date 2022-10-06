@@ -117,7 +117,7 @@ class Rebrandly_Domain_Redirect_Public {
 			}
 			add_query_arg('rb.routing.mode', 'aliasing');
 
-			$fallback_url = "https://" . $alias . $_SERVER[REQUEST_URI];
+			$fallback_url = "https://" . $alias . $_SERVER["REQUEST_URI"];
 			$http_temporary_redirect = 302;
 			$x_redirect_by = 'rebrandly';
 			wp_redirect( $fallback_url, $http_temporary_redirect, $x_redirect_by);
